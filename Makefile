@@ -3,9 +3,11 @@ BUILD_DIRS=build.*
 all: system
 
 system:
+	env PATH=$(PWD)/mybin:$(PATH) \
 	./scripts/image
 
 release:
+	env PATH=$(PWD)/mybin:$(PATH) \
 	./scripts/image release
 
 clean:
